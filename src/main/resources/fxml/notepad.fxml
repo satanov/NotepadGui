@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane fx:id="anchorPane" prefHeight="821.0" prefWidth="1135.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="notepad.NotepadController">
+   <children>
+      <SplitPane dividerPositions="0.2951111111111111" layoutX="1.0" layoutY="45.0" prefHeight="772.0" prefWidth="1135.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="21.0" prefWidth="291.0" text="Owner">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="92.0" prefHeight="21.0" prefWidth="291.0" text="Last Modified Date">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="175.0" prefHeight="21.0" prefWidth="291.0" text="Creation date">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="ownerTF" editable="false" layoutX="14.0" layoutY="53.0" prefHeight="31.0" prefWidth="300.0" />
+                  <TextField fx:id="lastDateTF" editable="false" layoutX="14.0" layoutY="130.0" prefHeight="31.0" prefWidth="300.0" />
+                  <TextField fx:id="creationTF" editable="false" layoutX="14.0" layoutY="212.0" prefHeight="31.0" prefWidth="300.0" />
+                  <TextField fx:id="typeTF" layoutX="20.0" layoutY="519.0" prefHeight="31.0" prefWidth="291.0" />
+                  <Label layoutX="20.0" layoutY="482.0" prefHeight="21.0" prefWidth="291.0" text="Type">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="sizeTF" editable="false" layoutX="16.0" layoutY="294.0" prefHeight="31.0" prefWidth="300.0" />
+                  <Label layoutX="16.0" layoutY="257.0" prefHeight="21.0" prefWidth="291.0" text="Size">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="19.0" layoutY="562.0" prefHeight="21.0" prefWidth="291.0" text="Author Name">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="authorNameTF" layoutX="19.0" layoutY="599.0" prefHeight="31.0" prefWidth="291.0" />
+                  <TextField fx:id="authorOrgTF" layoutX="16.0" layoutY="681.0" prefHeight="31.0" prefWidth="291.0" />
+                  <Label layoutX="16.0" layoutY="644.0" prefHeight="21.0" prefWidth="291.0" text="Author Organization">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="16.0" layoutY="337.0" prefHeight="21.0" prefWidth="291.0" text="File name">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="fileNameTF" editable="false" layoutX="16.0" layoutY="374.0" prefHeight="31.0" prefWidth="300.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="780.0" prefWidth="321.0">
+               <children>
+                  <TextArea fx:id="textArea" layoutX="-1.0" layoutY="2.0" prefHeight="770.0" prefWidth="795.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <ToolBar layoutX="1.0" prefHeight="45.0" prefWidth="1135.0">
+        <items>
+          <Button fx:id="openBtn" mnemonicParsing="false" onMouseClicked="#open" text="Open File" />
+            <Button fx:id="saveBtn" mnemonicParsing="false" onMouseClicked="#save" text="Save file" />
+            <Button fx:id="exitBtn" mnemonicParsing="false" onMouseClicked="#exit" text="Exit" />
+        </items>
+      </ToolBar>
+   </children>
+</AnchorPane>
